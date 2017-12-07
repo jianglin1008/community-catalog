@@ -70,6 +70,13 @@ services:
       DRONE_GOGS: true
       DRONE_GOGS_URL: ${drone_driver_url}
 {{- end}}
+{{- if eq .Values.drone_driver "Coding"}}
+      DRONE_CODING: true
+      DRONE_CODING_CLIENT: ${coding_driver_client}
+      DRONE_CODING_SECRET: ${coding_driver_secret}
+      DRONE_CODING_URL: ${coding_driver_url}
+      DRONE_CODING_GIT_MACHINE: ${coding_driver_git_machine}
+{{- end}}
 {{- if ne .Values.database_driver "sqlite"}}
       DRONE_DATABASE_DRIVER: ${database_driver}
       DRONE_DATABASE_DATASOURCE: ${database_source}

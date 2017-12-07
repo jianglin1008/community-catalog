@@ -69,6 +69,7 @@ catalog:
         - Gogs
         - Bitbucket Cloud
         - Bitbucket Server
+        - Coding
     - variable: drone_driver_client
       label: Remote Driver Client
       description: "Client key from remote driver. Required for GitHub, Bitbucket Cloud, Bitbucket Server and GitLab."
